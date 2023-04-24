@@ -10,9 +10,9 @@ public class SiteMap {
     public SiteMap(ExtendedWebDriver extendedWebDriver){
         this.extendedWebDriver = extendedWebDriver;
     }
-    public LoginPage goToLogin(String username, String password){
+
+  /*  public LoginPage goToLogin(String username, String password){
         extendedWebDriver.get(urlFor(LoginPage.class));
         return new LoginPage(extendedWebDriver);
-    }
-
+    }*/
 }

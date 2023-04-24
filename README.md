@@ -12,7 +12,7 @@ $ mvn clean test -Dbrowser=chrome
 ### Reporte de ejecución:
 El resultado de la ejecución se podrá obtener desde el reporte generado en:
 ```sh
-.../reports/crowdar-test-automation-report.html
+challenge-automation/reports/testng/emailable-report.html
 ```
 
 ### Requerimientos para la ejecución.

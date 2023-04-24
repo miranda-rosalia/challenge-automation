@@ -1,20 +1,20 @@
 package com.crowdar.pages.common;
 
-import com.crowdar.utils.PageUrlUtils;
+import com.crowdar.utils.Screenshot;
 import com.crowdar.webDriver.ExtendedWebDriver;
 import org.openqa.selenium.support.PageFactory;
 
-import java.util.Map;
+import java.io.IOException;
+
 
 public abstract class Page {
     protected ExtendedWebDriver webDriver;
-    protected Map<String, Object> pageContext;
-    protected Page(ExtendedWebDriver webDriver, Map pageContext) {
+    protected Page(ExtendedWebDriver webDriver){
         this.webDriver = webDriver;
-        this.pageContext = pageContext;
-        PageFactory.initElements(webDriver, this);
+      //  PageFactory.initElements(webDriver, this);
     }
-    protected String targetUrl() {
-        return PageUrlUtils.urlFor(this.getClass(), pageContext);
+    public void newScreenshot() throws IOException {
+        Screenshot screenshot = new Screenshot();
+        screenshot.newScreenshot(webDriver);
     }
 }

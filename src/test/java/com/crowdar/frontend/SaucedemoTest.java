@@ -2,27 +2,38 @@ package com.crowdar.frontend;
 
 import com.crowdar.core.TestBase;
 import com.crowdar.pages.InventoryPage;
-import com.crowdar.pages.LoginPage;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestMethodOrder;
+import com.crowdar.pages.loginPage.LoginPage;
+import com.crowdar.pages.shoppingCartPage.ShoppingCartPage;
+import org.junit.jupiter.api.Assertions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.testng.annotations.Test;
+
+import java.io.IOException;
 
 public class SaucedemoTest extends TestBase {
     private static final Logger LOGGER = LoggerFactory.getLogger(SaucedemoTest.class);
 
-    @org.testng.annotations.Test
-    public void dadoUnUsernameYPasswordValidosLoggeo() {
+    @Test
+    public void dadoUnUsernameYPasswordValidosLoggeo() throws IOException {
+        this.setUp("chrome");
+        LoginPage loginPage = new LoginPage(driver);
+        loginPage.logIn("standard_user","secret_sauce");
+        loginPage.newScreenshot();
+        InventoryPage inventoryPage = loginPage.goToInventory();
+        Assertions.assertEquals(inventoryPage.getWebDriver().getCurrentUrl(), "https://www.saucedemo.com/inventory.html");
 
-        LoginPage loginPage = siteMap.goToLogin("standard_user","secret_sauce");
-        InventoryPage inventoryPage=loginPage.goToInventory();
-        softAssert.assertEquals(inventoryPage.getWebDriver().getTitle(),"Swag Labs");
     }
 
     @Test
-    public void dadoUnUsernameValidoYPasswordInvalidoNoLoggearse(){
-        LoginPage loginPage = siteMap.goToLogin("standard_user","password_invalidate");
-        String messageError= "Epic sadface: Username and password do not match any user in this service";
-        softAssert.assertEquals(loginPage.getMessageError(),messageError);
+    public void dadoUnProductoDelInventoryAgregarAlCarrito() throws IOException{
+       this.setUp("chrome");
+        LoginPage loginPage = new LoginPage(driver);
+        loginPage.logIn("standard_user","secret_sauce");
+        // InventoryPage inventoryPage = loginPage.goToInventory(driver);
+        InventoryPage inventoryPage = new InventoryPage(loginPage.getWebDriver());
+        String productName = inventoryPage.addToCartFirstProduct();
+        ShoppingCartPage shoppingCart = inventoryPage.goToCart();
+        shoppingCart.verifyProduct(productName);
     }
 }

@@ -31,8 +31,8 @@ public class WebDriverBuilder {
         String driverPropertyKey = MessageFormat.format("driver.property.{0}", BROWSER);
         System.setProperty(driverPropertyKey, driverPath);
     }
-    public WebDriver build(){
-        return switch (BROWSER) {
+    public WebDriver build(String browser){
+        return switch (browser) {
             case "firefox" -> new FirefoxDriver(CapabilitiesFiller.buildFirefox());
             case "chrome-headless" -> new ChromeDriver(CapabilitiesFiller.buildChromeHeadless());
             default -> new ChromeDriver(CapabilitiesFiller.buildChrome());

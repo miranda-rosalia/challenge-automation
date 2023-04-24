@@ -12,12 +12,14 @@ public class SaucedemoPage extends Page {
 
 
     private MenuSaucedemo menuSaucedemo;
-    public SaucedemoPage(ExtendedWebDriver webDriver, Map mp){
-        super(webDriver, mp);
+   /* public SaucedemoPage(ExtendedWebDriver webDriver, Map mp){
+        super(webDriver);
         menuSaucedemo = new MenuSaucedemo(this);
-    }
+    }*/
     public SaucedemoPage(ExtendedWebDriver webDriver){
-        this(webDriver, new HashMap());
+       // this(webDriver, new HashMap());
+        super(webDriver);
+        menuSaucedemo = new MenuSaucedemo(this);
     }
     public Page getMenuSaucedemo() {
         return this.menuSaucedemo.goToSidebar();

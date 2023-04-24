@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="1" failed="2" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-04-24T11:42:02 ART" name="Crowdar Challenge" finished-at="2023-04-24T11:42:05 ART" duration-ms="3651">
+    <groups>
+    </groups>
+    <test started-at="2023-04-24T11:42:02 ART" name="Saucedemo Test" finished-at="2023-04-24T11:42:05 ART" duration-ms="3618">
+      <class name="com.crowdar.frontend.SaucedemoTest">
+        <test-method is-config="true" signature="springTestContextBeforeTestClass()[pri:0, instance:com.crowdar.frontend.SaucedemoTest@76ed1b7c]" started-at="2023-04-24T11:42:02 ART" name="springTestContextBeforeTestClass" finished-at="2023-04-24T11:42:02 ART" duration-ms="11" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestClass -->
+        <test-method is-config="true" signature="springTestContextPrepareTestInstance()[pri:0, instance:com.crowdar.frontend.SaucedemoTest@76ed1b7c]" started-at="2023-04-24T11:42:02 ART" name="springTestContextPrepareTestInstance" finished-at="2023-04-24T11:42:02 ART" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" duration-ms="258" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextPrepareTestInstance -->
+        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.crowdar.frontend.SaucedemoTest@76ed1b7c]" started-at="2023-04-24T11:42:02 ART" name="springTestContextBeforeTestMethod" finished-at="2023-04-24T11:42:02 ART" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.crowdar.frontend.SaucedemoTest.dadoUnProductoDelInventoryAgregarAlCarrito() throws java.io.IOException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method signature="dadoUnProductoDelInventoryAgregarAlCarrito()[pri:0, instance:com.crowdar.frontend.SaucedemoTest@76ed1b7c]" started-at="2023-04-24T11:42:02 ART" name="dadoUnProductoDelInventoryAgregarAlCarrito" finished-at="2023-04-24T11:42:04 ART" duration-ms="1740" status="FAIL">
+          <exception class="org.openqa.selenium.InvalidSelectorException">
+            <message>
+              <![CDATA[Compound class names not permitted
+For documentation on this error, please visit: https://selenium.dev/exceptions/#invalid_selector_exception
+Build info: version: '4.8.3', revision: 'e5e76298c3'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-147-generic', java.version: '19.0.1'
+Driver info: driver.version: unknown]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.InvalidSelectorException: Compound class names not permitted
+For documentation on this error, please visit: https://selenium.dev/exceptions/#invalid_selector_exception
+Build info: version: '4.8.3', revision: 'e5e76298c3'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-147-generic', java.version: '19.0.1'
+Driver info: driver.version: unknown
+at org.openqa.selenium.By$ByClassName.<init>(By.java:310)
+at org.openqa.selenium.By.className(By.java:100)
+at org.openqa.selenium.support.AbstractFindByBuilder.buildByFromShortFindBy(AbstractFindByBuilder.java:43)
+at org.openqa.selenium.support.FindBy$FindByBuilder.buildIt(FindBy.java:85)
+at org.openqa.selenium.support.pagefactory.Annotations.buildBy(Annotations.java:79)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.<init>(DefaultElementLocator.java:58)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.<init>(DefaultElementLocator.java:46)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocatorFactory.createLocator(DefaultElementLocatorFactory.java:33)
+at org.openqa.selenium.support.pagefactory.DefaultFieldDecorator.decorate(DefaultFieldDecorator.java:57)
+at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:111)
+at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:103)
+at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:90)
+at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:78)
+at com.crowdar.pages.InventoryPage.<init>(InventoryPage.java:25)
+at com.crowdar.frontend.SaucedemoTest.dadoUnProductoDelInventoryAgregarAlCarrito(SaucedemoTest.java:34)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper$1.runTestMethod(MethodInvocationHelper.java:258)
+at org.springframework.test.context.testng.AbstractTestNGSpringContextTests.run(AbstractTestNGSpringContextTests.java:154)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeHookable(MethodInvocationHelper.java:272)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:669)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.InvalidSelectorException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dadoUnProductoDelInventoryAgregarAlCarrito -->
+        <test-method is-config="true" signature="logEndTest()[pri:0, instance:com.crowdar.frontend.SaucedemoTest@76ed1b7c]" started-at="2023-04-24T11:42:04 ART" name="logEndTest" finished-at="2023-04-24T11:42:04 ART" duration-ms="104" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logEndTest -->
+        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.crowdar.frontend.SaucedemoTest@76ed1b7c]" started-at="2023-04-24T11:42:04 ART" name="springTestContextAfterTestMethod" finished-at="2023-04-24T11:42:04 ART" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.crowdar.frontend.SaucedemoTest.dadoUnProductoDelInventoryAgregarAlCarrito() throws java.io.IOException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method signature="dadoUnUsernameYPasswordValidosLoggeo()[pri:0, instance:com.crowdar.frontend.SaucedemoTest@76ed1b7c]" started-at="2023-04-24T11:42:04 ART" name="dadoUnUsernameYPasswordValidosLoggeo" finished-at="2023-04-24T11:42:05 ART" duration-ms="1357" status="FAIL">
+          <exception class="org.openqa.selenium.InvalidSelectorException">
+            <message>
+              <![CDATA[Compound class names not permitted
+For documentation on this error, please visit: https://selenium.dev/exceptions/#invalid_selector_exception
+Build info: version: '4.8.3', revision: 'e5e76298c3'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-147-generic', java.version: '19.0.1'
+Driver info: driver.version: unknown]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.InvalidSelectorException: Compound class names not permitted
+For documentation on this error, please visit: https://selenium.dev/exceptions/#invalid_selector_exception
+Build info: version: '4.8.3', revision: 'e5e76298c3'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-147-generic', java.version: '19.0.1'
+Driver info: driver.version: unknown
+at org.openqa.selenium.By$ByClassName.<init>(By.java:310)
+at org.openqa.selenium.By.className(By.java:100)
+at org.openqa.selenium.support.AbstractFindByBuilder.buildByFromShortFindBy(AbstractFindByBuilder.java:43)
+at org.openqa.selenium.support.FindBy$FindByBuilder.buildIt(FindBy.java:85)
+at org.openqa.selenium.support.pagefactory.Annotations.buildBy(Annotations.java:79)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.<init>(DefaultElementLocator.java:58)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.<init>(DefaultElementLocator.java:46)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocatorFactory.createLocator(DefaultElementLocatorFactory.java:33)
+at org.openqa.selenium.support.pagefactory.DefaultFieldDecorator.decorate(DefaultFieldDecorator.java:57)
+at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:111)
+at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:103)
+at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:90)
+at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:78)
+at com.crowdar.pages.InventoryPage.<init>(InventoryPage.java:25)
+at com.crowdar.pages.loginPage.LoginPage.goToInventory(LoginPage.java:37)
+at com.crowdar.frontend.SaucedemoTest.dadoUnUsernameYPasswordValidosLoggeo(SaucedemoTest.java:23)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper$1.runTestMethod(MethodInvocationHelper.java:258)
+at org.springframework.test.context.testng.AbstractTestNGSpringContextTests.run(AbstractTestNGSpringContextTests.java:154)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeHookable(MethodInvocationHelper.java:272)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:669)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.InvalidSelectorException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dadoUnUsernameYPasswordValidosLoggeo -->
+        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.crowdar.frontend.SaucedemoTest@76ed1b7c]" started-at="2023-04-24T11:42:04 ART" name="springTestContextBeforeTestMethod" finished-at="2023-04-24T11:42:04 ART" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.crowdar.frontend.SaucedemoTest.dadoUnUsernameYPasswordValidosLoggeo() throws java.io.IOException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method is-config="true" signature="logEndTest()[pri:0, instance:com.crowdar.frontend.SaucedemoTest@76ed1b7c]" started-at="2023-04-24T11:42:05 ART" name="logEndTest" finished-at="2023-04-24T11:42:05 ART" duration-ms="102" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logEndTest -->
+        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.crowdar.frontend.SaucedemoTest@76ed1b7c]" started-at="2023-04-24T11:42:05 ART" name="springTestContextAfterTestMethod" finished-at="2023-04-24T11:42:05 ART" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.crowdar.frontend.SaucedemoTest.dadoUnUsernameYPasswordValidosLoggeo() throws java.io.IOException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method is-config="true" signature="springTestContextAfterTestClass()[pri:0, instance:com.crowdar.frontend.SaucedemoTest@76ed1b7c]" started-at="2023-04-24T11:42:05 ART" name="springTestContextAfterTestClass" finished-at="2023-04-24T11:42:05 ART" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestClass -->
+      </class> <!-- com.crowdar.frontend.SaucedemoTest -->
+    </test> <!-- Saucedemo Test -->
+    <test started-at="2023-04-24T11:42:05 ART" name="Mercado Libre Test" finished-at="2023-04-24T11:42:05 ART" duration-ms="2">
+      <class name="com.crowdar.backend.MeliTest">
+        <test-method signature="sussessDepartments()[pri:0, instance:com.crowdar.backend.MeliTest@2525ff7e]" started-at="2023-04-24T11:42:05 ART" name="sussessDepartments" finished-at="2023-04-24T11:42:05 ART" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sussessDepartments -->
+      </class> <!-- com.crowdar.backend.MeliTest -->
+    </test> <!-- Mercado Libre Test -->
+  </suite> <!-- Crowdar Challenge -->
+</testng-results>

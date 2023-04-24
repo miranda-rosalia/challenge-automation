@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Crowdar Challenge" verbose="1" >
+    <test name="Saucedemo Test" >
+      <classes>
+        <class name="com.crowdar.frontend.SaucedemoTest" />
+      </classes>
+    </test>
+  <test name="Mercado Libre Test" >
+    <classes>
+      <class name="com.crowdar.backend.MeliTest" />
+    </classes>
+  </test>
+</suite>
