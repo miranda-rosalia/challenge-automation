@@ -12,13 +12,13 @@ public class MeliTest {
     public void sussessDepartments(){ getDepartments();}
 
     public void getDepartments(){
-       /* List<Department> listBooks  =  given()
+       List<Department> listBooks  =  given()
                 .header("Content-type", "application/json")
                 .when()
                 .get(baseURL+"departments")
                 .then()
                 .extract()
                 .body()
-                .jsonPath().getList(".",Department.class);*/
+                .jsonPath().getList(".",Department.class);
     }
 }
