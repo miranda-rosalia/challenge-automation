@@ -16,11 +16,15 @@ challenge-automation/reports/testng/emailable-report.html
 ```
 
 ### Requerimientos para la ejecución.
+
 Java 19.0.2
 
 Mvn 3.6.0
 
 ChromeDriver 111.0.5563.64
+
+Geckodriver v0.33.0-linux
+
 
 
 
